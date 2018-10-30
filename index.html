@@ -4,8 +4,43 @@
 <head>
     <meta charset="utf-8" />
     <title>Documentatie Hege - headgear web assistant</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+
+        body > * {
+            font-family: 'Playfair Display', serif;
+        }
+
+        header h1 {
+            font-size: 1.9em;
+            text-align: center;
+        }
+        
+        aside {
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+
+        section {
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+
+        #design {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        #design p, #design h2 {
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+
         .markup {
             height: 350px;
             min-width: 515px;
@@ -17,9 +52,15 @@
         }
 
         .afterAndBefore {
+            padding-left: 100px;
+            padding-right: 100px;
             width: 1030px;
             display: flex;
             flex-direction: row;
+        }
+
+        .cuprins ul {
+            list-style: none;
         }
     </style>
 </head>
@@ -38,36 +79,41 @@
                 </ul>
             </section>
         </header>
-        <aside typeof="schema:WPSideBar">
+        <aside typeof="schema:WPSideBar" id="cuprins">
             <h2>Cuprins:</h2>
-            <ul>
-                <li><a href="#descrierea">1. Descrierea proiectului</a></li>
-                <li><a href="#design">2. Idei/concepte importante privind designul general</a></li>
-                <li><a href="#interactiuneUtilizator">3. Maniera de interacţiune cu utilizatorul</a></li>
-                <li><a href="#github">4. Maniera de folosire a sistemului de management al codului-sursă ales</a></li>
-            </ul>
+            <ol>
+                <li><a href="#descrierea">Descrierea proiectului</a></li>
+                <li><a href="#design">Idei/concepte importante privind designul general</a></li>
+                <li><a href="#interactiuneUtilizator">Maniera de interacţiune cu utilizatorul</a></li>
+                <li><a href="#github">Maniera de folosire a sistemului de management al codului-sursă ales</a></li>
+            </ol>
         </aside>
-        <section typeof="schema:description" name="descrierea">
+        <section typeof="schema:description" id="descrierea">
             <h2>1. Descrierea proiectului</h2>
             <p>
-                Ideea aplicatiei este de a concepe un magazin web de accesorii de imbracaminte pentru acoperit crestetul capului.
-                Utilizatorul are posibilitatea de a proba accesoriile fara a necesita prezenta fizica folosind realitatea
-                imbogatita (AR – Augmented Reality). Pe langa lista de accesorii valabile in magazinul online, utilizatorului ii vor fi
+                Ideea aplicatiei este de a concepe un magazin web de accesorii de imbracaminte pentru acoperit
+                crestetul capului.
+                Utilizatorul are posibilitatea de a proba accesoriile fara a necesita prezenta fizica folosind
+                realitatea
+                imbogatita (AR – Augmented Reality). Pe langa lista de accesorii valabile in magazinul online,
+                utilizatorului ii vor fi
                 oferite o lista de recomandari:
                 <ul>
                     <li>In functie de sezon (bazata pe data)</li>
                     <li>In functie de moda curenta (locatie)</li>
                     <li>In functie de preferintele specifice utilizatorului (wishlist)</li>
-                    <li>Eventual pe baza cercului de prieteni intr-o retea sociala</li>         
+                    <li>Eventual pe baza cercului de prieteni intr-o retea sociala</li>
                 </ul>
             </p>
         </section>
         <section id="design">
             <h2>2. Idei/concepte importante privind designul general</h2>
             <p>
-                Avand o idee generala in gand am incercat sa transpunem design-ul aplicaitei pe primele noastre schite, precum se vede
+                Avand o idee generala in gand am incercat sa transpunem design-ul aplicaitei pe primele noastre schite,
+                precum se vede
                 in partea stanga a pagini.
-                In partea dreapta putem observa implementarea acestor schite, cu mici modificari, in HTML si CSS, care reprezinta
+                In partea dreapta putem observa implementarea acestor schite, cu mici modificari, in HTML si CSS, care
+                reprezinta
                 design-ul final.
             </p>
             <div class="afterAndBefore">
@@ -188,19 +234,23 @@
         <section id="interactiuneUtilizator">
             <h2>3. Maniera de interacţiune cu utilizatorul</h2>
             <p>
-                Utilizatorul acceseaza initial pagina principala a aplicatiei unde poate vedea ultimele accessorii adaugate, si poate
+                Utilizatorul acceseaza initial pagina principala a aplicatiei unde poate vedea ultimele accessorii
+                adaugate, si poate
                 accessa toate categoriile accessoriilor prin dropdown-ul din partea stanga sus.
-                Fiecare accesoriu isi are pagina lui, unde utilizatorul poate proba "virtual" accesoruiul dat folosind realitatea
+                Fiecare accesoriu isi are pagina lui, unde utilizatorul poate proba "virtual" accesoruiul dat folosind
+                realitatea
                 augmentata. Proband accesoriul, utilizatorul poate salva o poza cu accesoriul dorit.
-                Utilizatorii mai au posibilitatea de a adauga accesoriile dorite intr-un cos, simuland astfel magazinul online. De
+                Utilizatorii mai au posibilitatea de a adauga accesoriile dorite intr-un cos, simuland astfel magazinul
+                online. De
                 asemenea fiecare utilizator isi are accesoriile lui preferate.
             </p>
         </section>
         <section id="github">
             <h2>4. Maniera de folosire a sistemului de management al codului-sursă ales</h2>
             <p>
-                Toate fisierele sursa se afla la adresa <a href="https://github.com/MariusParasca/cliw">HEGE GITHUB</a>, unde poate fi observata evolutia aplicatiei si contribuiile
-                fiecarui autor. 
+                Toate fisierele sursa se afla la adresa <a href="https://github.com/MariusParasca/cliw">HEGE</a>,
+                unde poate fi observata evolutia aplicatiei si contribuiile
+                fiecarui autor.
             </p>
         </section>
     </article>
