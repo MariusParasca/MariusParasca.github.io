@@ -1,28 +1,209 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Documentatie Hege - headgear web assistant</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+        .markup {
+            height: 350px;
+            min-width: 515px;
+            max-width: 515px;
+        }
+
+        .webMarkup {
+            height: 350px;
+        }
+
+        .afterAndBefore {
+            width: 1030px;
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body prefix="schema: http://schema.org/">
+    <article typeof="schema:ScholarlyArticle" resources="#">
+        <header>
+            <h1 property="schema:name">
+                Headgear web assistant (<span role="doc-subtitle" property="shcema:alternateName">HEGE</span>)
+            </h1>
+            <section role="contentinfo" typeof="sa:AuthorsList">
+                <h2>Autorii:</h2>
+                <ul>
+                    <li typeof="schema:author"><span typeof="schema:Person">Parasca Marius</span></li>
+                    <li typeof="schema:author"><span typeof="schema:Person">Cotofana Victor</span></li>
+                </ul>
+            </section>
+        </header>
+        <aside typeof="schema:WPSideBar">
+            <h2>Cuprins:</h2>
+            <ul>
+                <li><a href="#descrierea">1. Descrierea proiectului</a></li>
+                <li><a href="#design">2. Idei/concepte importante privind designul general</a></li>
+                <li><a href="#interactiuneUtilizator">3. Maniera de interacţiune cu utilizatorul</a></li>
+                <li><a href="#github">4. Maniera de folosire a sistemului de management al codului-sursă ales</a></li>
+            </ul>
+        </aside>
+        <section typeof="schema:description" name="descrierea">
+            <h2>1. Descrierea proiectului</h2>
+            <p>
+                Ideea aplicatiei este de a concepe un magazin web de accesorii de imbracaminte pentru acoperit crestetul capului.
+                Utilizatorul are posibilitatea de a proba accesoriile fara a necesita prezenta fizica folosind realitatea
+                imbogatita (AR – Augmented Reality). Pe langa lista de accesorii valabile in magazinul online, utilizatorului ii vor fi
+                oferite o lista de recomandari:
+                <ul>
+                    <li>In functie de sezon (bazata pe data)</li>
+                    <li>In functie de moda curenta (locatie)</li>
+                    <li>In functie de preferintele specifice utilizatorului (wishlist)</li>
+                    <li>Eventual pe baza cercului de prieteni intr-o retea sociala</li>         
+                </ul>
+            </p>
+        </section>
+        <section id="design">
+            <h2>2. Idei/concepte importante privind designul general</h2>
+            <p>
+                Avand o idee generala in gand am incercat sa transpunem design-ul aplicaitei pe primele noastre schite, precum se vede
+                in partea stanga a pagini.
+                In partea dreapta putem observa implementarea acestor schite, cu mici modificari, in HTML si CSS, care reprezinta
+                design-ul final.
+            </p>
+            <div class="afterAndBefore">
+                <figure typeof="schema:image">
+                    <img class="markup" src="./home.jpg">
+                    <figcaption>
+                        Prima chita a paginii principale
+                    </figcaption>
+                </figure>
+                <figure typeof="schema:image">
+                    <img class="webMarkup" src="./home_web.jpg">
+                    <figcaption>
+                        Design-ul final al paginii principale
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="afterAndBefore">
+                <figure typeof="schema:image">
+                    <img class="markup" src="./accessory.jpg">
+                    <figcaption>
+                        Prima schita a paginii tuturor accesoriilor
+                    </figcaption>
+                </figure>
+                <figure typeof="schema:image">
+                    <img class="webMarkup" src="./accessory_web.jpg">
+                    <figcaption>
+                        Design-ul final al paginii tuturor accesoriilor
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="afterAndBefore">
+                <figure typeof="schema:image">
+                    <img class="markup" src="./favorite.jpg">
+                    <figcaption>
+                        Prima schita a paginii produselor favorite
+                    </figcaption>
+                </figure>
+                <figure typeof="schema:image">
+                    <img class="webMarkup" src="./favorite_web.jpg">
+                    <figcaption>
+                        Design-ul final al paginii produselor favorite
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="afterAndBefore">
+                <figure typeof="schema:image">
+                    <img class="markup" src="./item.jpg">
+                    <figcaption>
+                        Prima schita a paginii unui produs individual
+                    </figcaption>
+                </figure>
+                <figure typeof="schema:image">
+                    <img class="webMarkup" src="./item_web.jpg">
+                    <figcaption>
+                        Design-ul final al paginii unui produs individual
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="afterAndBefore">
+                <figure typeof="schema:image">
+                    <img class="markup" src="./item2.jpg">
+                    <figcaption>
+                        Prima schita a paginii unde utilizatorul poate pruba virtual accesoriu
+                    </figcaption>
+                </figure>
+                <figure typeof="schema:image">
+                    <img class="webMarkup" src="./item_web2.jpg">
+                    <figcaption>
+                        Design-ul final al paginii unde utilizatorul poate pruba virtual accesoriu
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="afterAndBefore">
+                <figure typeof="schema:image">
+                    <img class="markup" src="./login_register.jpg">
+                    <figcaption>
+                        Prima schita a paginii unde utilizatorul se logheaza
+                    </figcaption>
+                </figure>
+                <figure typeof="schema:image">
+                    <img class="webMarkup" src="./login_register_web.jpg">
+                    <figcaption>
+                        Design-ul final al paginii unde utilizatorul se logheaza
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="afterAndBefore">
+                <figure typeof="schema:image">
+                    <img class="markup" src="./cart.jpg">
+                    <figcaption>
+                        Prima schita a paginii unde utilizatorul poate vizualiza produsele din cos
+                    </figcaption>
+                </figure>
+                <figure typeof="schema:image">
+                    <img class="webMarkup" src="./cart_web.jpg">
+                    <figcaption>
+                        Design-ul final al paginii unde utilizatorul poate vizualiza produsele din cos
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="afterAndBefore">
+                <figure typeof="schema:image">
+                    <img class="markup" src="./user.jpg">
+                    <figcaption>
+                        Prima schita a paginii unde utilizatorul isi poate modifica setarile contului
+                    </figcaption>
+                </figure>
+                <figure typeof="schema:image">
+                    <img class="webMarkup" src="./user_web.jpg">
+                    <figcaption>
+                        Design-ul final al paginii unde utilizatorul isi poate modifica setarile contului
+                    </figcaption>
+                </figure>
+            </div>
+            <p>
+            </p>
+        </section>
+        <section id="interactiuneUtilizator">
+            <h2>3. Maniera de interacţiune cu utilizatorul</h2>
+            <p>
+                Utilizatorul acceseaza initial pagina principala a aplicatiei unde poate vedea ultimele accessorii adaugate, si poate
+                accessa toate categoriile accessoriilor prin dropdown-ul din partea stanga sus.
+                Fiecare accesoriu isi are pagina lui, unde utilizatorul poate proba "virtual" accesoruiul dat folosind realitatea
+                augmentata. Proband accesoriul, utilizatorul poate salva o poza cu accesoriul dorit.
+                Utilizatorii mai au posibilitatea de a adauga accesoriile dorite intr-un cos, simuland astfel magazinul online. De
+                asemenea fiecare utilizator isi are accesoriile lui preferate.
+            </p>
+        </section>
+        <section id="github">
+            <h2>4. Maniera de folosire a sistemului de management al codului-sursă ales</h2>
+            <p>
+                Toate fisierele sursa se afla la adresa <a href="https://github.com/MariusParasca/cliw">HEGE GITHUB</a>, unde poate fi observata evolutia aplicatiei si contribuiile
+                fiecarui autor. 
+            </p>
+        </section>
+    </article>
+</body>
+
 </html>
