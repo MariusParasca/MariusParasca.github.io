@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 
 <head>
     <meta charset="utf-8" />
     <title>Documentatie Hege - headgear web assistant</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <style>
         body {
@@ -12,7 +12,7 @@
             padding-bottom: 50px;
         }
 
-        body > * {
+        body>* {
             font-family: 'Playfair Display', serif;
         }
 
@@ -20,13 +20,8 @@
             font-size: 1.9em;
             text-align: center;
         }
-        
-        aside {
-            padding-left: 300px;
-            padding-right: 300px;
-        }
 
-        section {
+        aside, header div, section {
             padding-left: 300px;
             padding-right: 300px;
         }
@@ -36,7 +31,8 @@
             padding-right: 0;
         }
 
-        #design p, #design h2 {
+        #design p,
+        #design h2 {
             padding-left: 300px;
             padding-right: 300px;
         }
@@ -65,19 +61,19 @@
     </style>
 </head>
 
-<body prefix="schema: http://schema.org/">
-    <article typeof="schema:ScholarlyArticle" resources="#">
+<body>
+    <article typeof="schema:ScholarlyArticle">
         <header>
             <h1 property="schema:name">
                 Headgear web assistant (<span role="doc-subtitle" property="shcema:alternateName">HEGE</span>)
             </h1>
-            <section role="contentinfo" typeof="sa:AuthorsList">
+            <div role="contentinfo" typeof="sa:AuthorsList">
                 <h2>Autorii:</h2>
                 <ul>
                     <li typeof="schema:author"><span typeof="schema:Person">Parasca Marius</span></li>
                     <li typeof="schema:author"><span typeof="schema:Person">Cotofana Victor</span></li>
                 </ul>
-            </section>
+            </div>
         </header>
         <aside typeof="schema:WPSideBar" id="cuprins">
             <h2>Cuprins:</h2>
@@ -98,13 +94,13 @@
                 imbogatita (AR – Augmented Reality). Pe langa lista de accesorii valabile in magazinul online,
                 utilizatorului ii vor fi
                 oferite o lista de recomandari:
-                <ul>
-                    <li>In functie de sezon (bazata pe data)</li>
-                    <li>In functie de moda curenta (locatie)</li>
-                    <li>In functie de preferintele specifice utilizatorului (wishlist)</li>
-                    <li>Eventual pe baza cercului de prieteni intr-o retea sociala</li>
-                </ul>
             </p>
+            <ul>
+                <li>In functie de sezon (bazata pe data)</li>
+                <li>In functie de moda curenta (locatie)</li>
+                <li>In functie de preferintele specifice utilizatorului (wishlist)</li>
+                <li>Eventual pe baza cercului de prieteni intr-o retea sociala</li>
+            </ul>
         </section>
         <section id="design">
             <h2>2. Idei/concepte importante privind designul general</h2>
@@ -228,8 +224,6 @@
                     </figcaption>
                 </figure>
             </div>
-            <p>
-            </p>
         </section>
         <section id="interactiuneUtilizator">
             <h2>3. Maniera de interacţiune cu utilizatorul</h2>
