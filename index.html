@@ -13,7 +13,7 @@
     <article typeof="schema:ScholarlyArticle">
         <header>
             <h1 property="schema:name">
-                Headgear web assistant (<span role="doc-subtitle" property="shcema:alternateName">HEGE</span>)
+                Headgear Web Assistant (<span role="doc-subtitle" property="shcema:alternateName">HEGE</span>)
             </h1>
             <div role="contentinfo" typeof="sa:AuthorsList">
                 <h2>Autorii:</h2>
@@ -30,6 +30,7 @@
                 <li><a href="#design">Idei/concepte importante privind designul general</a></li>
                 <li><a href="#interactiuneUtilizator">Maniera de interacţiune cu utilizatorul</a></li>
                 <li><a href="#github">Maniera de folosire a sistemului de management al codului-sursă ales</a></li>
+                <li><a href="#arhitectura">Arhitectura software de ansamblu</a></li>
             </ol>
         </aside>
         <section typeof="schema:description" id="descrierea">
@@ -194,6 +195,24 @@
                 unde poate fi observata evolutia aplicatiei si contribuiile
                 fiecarui autor.
             </p>
+        </section>
+        <section id="arhitectura">
+            <h2>5. Arhitectura software de ansamblu</h2>
+            <p>
+                Site-ul este o aplicatie WEB de tipul <em>SPA - Single Page Application</em>. Beneficiul acestei categorii de
+                aplicatie este interactiunea utilizatorului cu aplicatia, oferind-ui o experienta similara cu
+                aplicatiile de tip desktop. Accesand diferite pagini fereastra utilizatorul nu se reincarca, iar pagina
+                dorita se schimba aproape instant. Un dezavantaj al acestei categorii este request-ul initial. Acesta
+                contine toate fisierele site-ului, fiind mai mare in dimensiune si poate dura mai mult timp decat un
+                request simplu. Rutarea paginilor se face in javascript la nivel de client pe baza variabilei
+                <code>window.location.hash</code> (ceea ce vine dupa # in url).
+            </p>
+            <figure typeof="schema:image">
+                <img class="diagram" src="SPA_UML.png">
+                <figcaption>
+                    Diagrama apliactiei la nivel arhitectural (SPA)
+                </figcaption>
+            </figure>
         </section>
     </article>
 </body>
