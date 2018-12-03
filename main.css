@@ -27,3 +27,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
+section > *:not(h2) {
+    margin-left: 40px;
+}

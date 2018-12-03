@@ -185,7 +185,7 @@
                 augmentata. Proband accesoriul, utilizatorul poate salva o poza cu accesoriul dorit.
                 Utilizatorii mai au posibilitatea de a adauga accesoriile dorite intr-un cos, simuland astfel magazinul
                 online. De
-                asemenea fiecare utilizator isi are accesoriile lui preferate.
+                asemenea fiecare utilizator are o pagina separata pentru accesoriile sale preferate.
             </p>
         </section>
         <section id="github">
@@ -198,13 +198,21 @@
         </section>
         <section id="arhitectura">
             <h2>5. Arhitectura software de ansamblu</h2>
+            <h3>Single Page Application</h3>
             <p>
-                Site-ul este o aplicatie WEB de tipul <em>SPA - Single Page Application</em>. Beneficiul acestei categorii de
+                Site-ul este o aplicatie WEB de tipul <em>SPA - Single Page Application</em>. Beneficiul acestei
+                categorii de
                 aplicatie este interactiunea utilizatorului cu aplicatia, oferind-ui o experienta similara cu
                 aplicatiile de tip desktop. Accesand diferite pagini fereastra utilizatorul nu se reincarca, iar pagina
                 dorita se schimba aproape instant. Un dezavantaj al acestei categorii este request-ul initial. Acesta
                 contine toate fisierele site-ului, fiind mai mare in dimensiune si poate dura mai mult timp decat un
-                request simplu. Rutarea paginilor se face in javascript la nivel de client pe baza variabilei
+                request simplu.
+            </p>
+            <p>
+                Structura consta intr-un fisier inital <code>index.html</code> care contine template-ul de baza a
+                aplicatiei,
+                si in care sunt incarcate dinamic celelalte pagini html. Rutarea paginilor se face in javascript la
+                nivel de client pe baza variabilei
                 <code>window.location.hash</code> (ceea ce vine dupa # in url).
             </p>
             <figure typeof="schema:image">
@@ -213,6 +221,50 @@
                     Diagrama apliactiei la nivel arhitectural (SPA)
                 </figcaption>
             </figure>
+            <h3>tracking.js</h3>
+            <p>
+                Pentru partea de <em>AR - Augmented Reality</em> folosim libraria <strong>tracking.js</strong>
+                (<a href="https://trackingjs.com/">https://trackingjs.com/</a>), care aduce diferiti algoritmi si
+                tehnici din
+                domeniul computer vision direct in mediul browserului. Cu ajutorul acesteia vom detecta fata
+                utilizatorului.
+                Pentru a accesa camera web a utilizatorului, folosim tag-ul html <code>video</code>. Specificam
+                librariei ca
+                folosim camera web si o setam pentru detectia faciala. Aceasta la randul ei returneaza coordonatele
+                fetei gasite,
+                pe care le folosim sa punem accesoriul (pentru acoperit crestetul capului) pe un <code>canvas</code> ce
+                se afla
+                peste tag-ul <code>video</code>, astfel simuland "probarea" accesoriului. De asemenea odata ce
+                utilizatorul probeaza
+                accesoriul are posibilitatea de a face o captura de ecran (screenshot) a sa (din camera web) si
+                accesoriul probat.
+                Pentru a obtine asta folosim <code>mediaDevices.getUserMedia</code> ce face parte din API-ul <code>navigator</code>.
+            </p>
+            <h3>Local storage</h3>
+            <p>
+                Avand posibilitatea de a-si face o catura de ecran cu accesoriul dorit, utilizatorul poate salva aceste
+                imagini local, fiind accesibile pentru descarcare dupa capturare. Pentru a obtine aceasta
+                functionalitate,
+                folosim mecanismul de stocare locala a datelor oferit de <strong>Web Storage API</strong>: <code>localStorage</code>.
+                Acesta mentinand datele local chiar si cand utilizatorul inchide browserul.
+                La fel in local storage vor fi salvate accesoriile favorite
+                ale utilizatorului.
+            </p>
+            <h3>Session storage</h3>
+            <p>
+                Un alt mecanism de stocare a datelor oferit de Web Storage API este <code>sessionStorage</code>. Ce il face diferit fata 
+                de precedentul e faptul ca valabilitatea datelor dureaza exact cat sesiunea paginii, in alte cuvinte, cat timp utilizatorul
+                tine fereastra pornita. Functionalitatea acestuia o folosim pentru a simula cosul de cumparaturi, astfel simuland si magazinul 
+                online. Utilizatorul isi poate verifica cosul dupa selectia accesoriilor dorite, si la urmatoarea sesiune nu va avea in cos 
+                accesoriile din sesiunea trecuta, imbunatatind experienta utilizatorului.
+            </p>
+            <h3>JSON</h3>
+            <p>
+                Neavand partea de server simulam o baza de date printr-un fisier JSON. Fiecare accesoriu isi are calea catre imagine folosita 
+                pentru reprezentare, descrierea si categoriile ei. Pe baza categoriilor, accesoriile vor fi sortate in pagina principala de 
+                accesorii, de asemenea pe baza lor se vor face ulterioarele recomandari bazate pe preferintele utilizatoruli. Fiind o aplicaite
+                de tipul SPA, fisierul JSON vine odata cu requestul initial, astfel permitand accesarea accesoriilor in modul offline.
+            </p>
         </section>
     </article>
 </body>
