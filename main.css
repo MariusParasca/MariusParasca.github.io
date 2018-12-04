@@ -28,6 +28,10 @@ body {
     justify-content: center;
 }
 
+.microdate {
+    width: 800px;
+}
+
 section > *:not(h2) {
     margin-left: 40px;
 }
