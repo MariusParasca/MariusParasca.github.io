@@ -2,7 +2,7 @@
 <html lang="ro">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Documentatie Hege - headgear web assistant</title>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -18,8 +18,8 @@
             <div role="contentinfo" typeof="sa:AuthorsList">
                 <h2>Autorii:</h2>
                 <ul>
-                    <li typeof="schema:author"><span typeof="schema:Person">Parasca Marius</span></li>
-                    <li typeof="schema:author"><span typeof="schema:Person">Cotofana Victor</span></li>
+                    <li typeof="schema:author"><a href="https://github.com/MariusParasca" typeof="schema:Person">Parasca Marius</a></li>
+                    <li typeof="schema:author"><a href="https://github.com/victorcotofana" typeof="schema:Person">Cotofana Victor</a></li>
                 </ul>
             </div>
         </header>
@@ -238,7 +238,8 @@
             </p>
             <h3>Session storage</h3>
             <p>
-                Un alt mecanism de stocare a datelor oferit de <strong>Web Storage API</strong> este <code>sessionStorage</code>. Ce il
+                Un alt mecanism de stocare a datelor oferit de <strong>Web Storage API</strong> este <code>sessionStorage</code>.
+                Ce il
                 face diferit fata
                 de precedentul e faptul ca valabilitatea datelor dureaza exact cat sesiunea paginii, in alte cuvinte,
                 cat timp utilizatorul
@@ -248,26 +249,51 @@
                 sesiune nu va avea in cos
                 accesoriile din sesiunea trecuta, imbunatatind experienta utilizatorului.
             </p>
+            <h3>Google Firebase</h3>
+            <p>
+                Neavand nevoie de un server, am cautat solutii de stocare a datelor astfel incat sa putem lua datele
+                doar prin requesturi
+                AJAX. Asadar din suita de servicii <a href="https://firebase.google.com/">Google Firebase</a> am
+                folosit <strong>Cloud Firestore</strong> si
+                <strong>Cloud Storage</strong>. Acolo am stocat toate datele legate de produsele pe care le
+                ofera site-ul. Am stocat atat datele text cat si imaginile. Google Firebase ofera un mod de a interoga
+                baza de date creand
+                query-uri pe baza functilor, putand chiar si filtra pe cloud datele de care avem nevoie.
+            </p>
             <h3>Microdate</h3>
             <p>
                 Pentru intelegerea mai buna a continutului site-ului de catre motoarele de cautare(<em>SEO -
-                Search negine Optimization</em>) folosim sistemul de marcare (markup) <a href="https://schema.org/">Schema.org</a>.
+                    Search negine Optimization</em>) folosim sistemul de marcare (markup) <a href="https://schema.org/">Schema.org</a>.
                 Marcatorul parinte pe care il folosim este schema <a href="https://schema.org/Store"><code>store</code></a>
                 reprezentand schema generala pentru magazine.
                 De exemplu vom folosi prorietatea <a href="https://schema.org/Offer"><code>offer</code></a>
                 pentru fiecare produs pe care il ofera site-ul.
             </p>
             <figure typeof="schema:image">
-                <img class="microdate" src="microdate.png">
+                <img class="microdate" src="microdate.jpg">
                 <figcaption>
                     Exemplu microdate
                 </figcaption>
             </figure>
         </section>
         <section id="testare">
-            <h2>5. Testare si chestii</h2>
+            <h2>5. Testare si Banchmarking</h2>
             <p>
-                Soon.
+                <h3>Banchmarking</h3>
+                <p>
+                    Pentru a imbunatatii calitatea aplicatiei noastre web am decurs la utilizarea unui tool automat
+                    open-source
+                    <a href="https://developers.google.com/web/tools/lighthouse/">
+                        <strong>Google Lighthouse</strong>
+                    </a>
+                    Fiind un produs Google, este acesibil din browser-ul Chrome, in DevTools in Audits. Pe baza
+                    raportului oferit de acest tool am
+                    imbunatit performanta site-ului, folosind sfaturile din raport. De asemenea raportul ne-a aratat ca
+                    aplicatia respecta metricile de
+                    SEO (<em>Search Engine Optimization</em>) fiind folosite microdatele, cat si metricile de best
+                    practices ceea ce a fost confirmat si
+                    de validatorul <a href="https://validator.w3.org/">W3C</a>.
+                </p>
             </p>
         </section>
         <section id="github">
