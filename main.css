@@ -10,27 +10,27 @@ body {
     width: 1030px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin: 0;
+    margin-bottom: 30px;
 }
 
 .markup {
-    height: 350px;
-    min-width: 515px;
-    max-width: 515px;
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.noHeight {
+    height: unset;
 }
 
 .webMarkup {
-    /* height: 350px; */
-    width: 800px;
+    width: 700px;
 }
 
 .diagram {
     display: flex;
     justify-content: center;
-}
-
-.microdate {
-    width: 800px;
 }
 
 section > *:not(h2) {
