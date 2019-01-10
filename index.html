@@ -29,8 +29,9 @@
                 <li><a href="#descrierea">Descrierea proiectului</a></li>
                 <li><a href="#design">Idei/concepte importante privind designul general</a></li>
                 <li><a href="#interactiuneUtilizator">Maniera de interacţiune cu utilizatorul</a></li>
-                <li><a href="#github">Maniera de folosire a sistemului de management al codului-sursă ales</a></li>
                 <li><a href="#arhitectura">Arhitectura software de ansamblu</a></li>
+                <li><a href="#testare">Testare si chestii</a></li>
+                <li><a href="#github">Maniera de folosire a sistemului de management al codului-sursă ales</a></li>
             </ol>
         </aside>
         <section typeof="schema:description" id="descrierea">
@@ -42,22 +43,15 @@
                 realitatea
                 imbogatita (AR – Augmented Reality). Pe langa lista de accesorii valabile in magazinul online,
                 utilizatorului ii vor fi
-                oferite o lista de recomandari:
+                oferite o lista de recomandari: in functie de sezonul curent si in functie de preferinta utilizatorului
+                privind culoarea accesoriilor.
             </p>
-            <ul>
-                <li>In functie de sezon (bazata pe data)</li>
-                <li>In functie de moda curenta (locatie)</li>
-                <li>In functie de preferintele specifice utilizatorului (wishlist)</li>
-                <li>Eventual pe baza cercului de prieteni intr-o retea sociala</li>
-            </ul>
         </section>
         <section id="design">
             <h2>2. Idei/concepte importante privind designul general</h2>
             <p>
-                Avand o idee generala in gand am incercat sa transpunem design-ul aplicaitei pe primele noastre schite,
-                precum se vede
-                in partea stanga a pagini.
-                In partea dreapta putem observa implementarea acestor schite, cu mici modificari, in HTML si CSS, care
+                Avand o idee generala in gand am incercat sa transpunem design-ul aplicaitei pe primele noastre schite.
+                Mai jos putem observa implementarea acestor schite, cu mici modificari, in HTML si CSS, care
                 reprezinta
                 design-ul final.
             </p>
@@ -69,7 +63,7 @@
                     </figcaption>
                 </figure>
                 <figure typeof="schema:image">
-                    <img class="webMarkup" src="./home_web.jpg">
+                    <img class="webMarkup" src="./home_web.png">
                     <figcaption>
                         Design-ul final al paginii principale
                     </figcaption>
@@ -83,7 +77,7 @@
                     </figcaption>
                 </figure>
                 <figure typeof="schema:image">
-                    <img class="webMarkup" src="./accessory_web.jpg">
+                    <img class="webMarkup" src="./accessory_web.png">
                     <figcaption>
                         Design-ul final al paginii tuturor accesoriilor
                     </figcaption>
@@ -97,9 +91,23 @@
                     </figcaption>
                 </figure>
                 <figure typeof="schema:image">
-                    <img class="webMarkup" src="./favorite_web.jpg">
+                    <img class="webMarkup" src="./favorite_web.png">
                     <figcaption>
                         Design-ul final al paginii produselor favorite
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="afterAndBefore">
+                <figure typeof="schema:image">
+                    <img class="markup" src="./cart.jpg">
+                    <figcaption>
+                        Prima schita a paginii unde utilizatorul poate vizualiza produsele din cos
+                    </figcaption>
+                </figure>
+                <figure typeof="schema:image">
+                    <img class="webMarkup" src="./cart_web.png">
+                    <figcaption>
+                        Design-ul final al paginii unde utilizatorul poate vizualiza produsele din cos
                     </figcaption>
                 </figure>
             </div>
@@ -111,7 +119,7 @@
                     </figcaption>
                 </figure>
                 <figure typeof="schema:image">
-                    <img class="webMarkup" src="./item_web.jpg">
+                    <img class="webMarkup" src="./item_web.png">
                     <figcaption>
                         Design-ul final al paginii unui produs individual
                     </figcaption>
@@ -125,37 +133,9 @@
                     </figcaption>
                 </figure>
                 <figure typeof="schema:image">
-                    <img class="webMarkup" src="./item_web2.jpg">
+                    <img class="webMarkup" src="./item_web2.png">
                     <figcaption>
                         Design-ul final al paginii unde utilizatorul poate proba virtual accesoriul
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="afterAndBefore">
-                <figure typeof="schema:image">
-                    <img class="markup" src="./login_register.jpg">
-                    <figcaption>
-                        Prima schita a paginii unde utilizatorul se logheaza
-                    </figcaption>
-                </figure>
-                <figure typeof="schema:image">
-                    <img class="webMarkup" src="./login_register_web.jpg">
-                    <figcaption>
-                        Design-ul final al paginii unde utilizatorul se logheaza
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="afterAndBefore">
-                <figure typeof="schema:image">
-                    <img class="markup" src="./cart.jpg">
-                    <figcaption>
-                        Prima schita a paginii unde utilizatorul poate vizualiza produsele din cos
-                    </figcaption>
-                </figure>
-                <figure typeof="schema:image">
-                    <img class="webMarkup" src="./cart_web.jpg">
-                    <figcaption>
-                        Design-ul final al paginii unde utilizatorul poate vizualiza produsele din cos
                     </figcaption>
                 </figure>
             </div>
@@ -167,7 +147,7 @@
                     </figcaption>
                 </figure>
                 <figure typeof="schema:image">
-                    <img class="webMarkup" src="./user_web.jpg">
+                    <img class="webMarkup" src="./user_web.png">
                     <figcaption>
                         Design-ul final al paginii unde utilizatorul isi poate modifica setarile contului
                     </figcaption>
@@ -182,22 +162,26 @@
                 accessa toate categoriile accessoriilor prin dropdown-ul din partea stanga sus.
                 Fiecare accesoriu isi are pagina lui, unde utilizatorul poate proba "virtual" accesoruiul dat folosind
                 realitatea
-                augmentata. Proband accesoriul, utilizatorul poate salva o poza cu accesoriul dorit.
+                augmentata.
+                <br>
+                <br>
+                Daca utilizatorului ii place un anumit accesoriu foarte tare, il poate adauga in lista sa
+                de accesorii
+                preferate apasand pe butonul in forma de inima. Toate accesoriile preferate pot fi vizualizate in
+                pagina de Favorite.
+                <br>
+                <br>
+                Proband accesoriul, utilizatorul poate salva o poza cu
+                accesoriul dorit. Toate pozele
+                salvate pot fi gasite in pagina utilizatorului, de unde pot fi descarcate oricand. La fel in pagina
+                utilizatorului poate fi gasita preferinta utilizatorului pentru culorile accesoriilor, pe baza caruia
+                utilizatorul va primi recomandari.
                 Utilizatorii mai au posibilitatea de a adauga accesoriile dorite intr-un cos, simuland astfel magazinul
-                online. De
-                asemenea fiecare utilizator are o pagina separata pentru accesoriile sale preferate.
-            </p>
-        </section>
-        <section id="github">
-            <h2>4. Maniera de folosire a sistemului de management al codului-sursă ales</h2>
-            <p>
-                Toate fisierele sursa se afla la adresa <a href="https://github.com/MariusParasca/cliw">HEGE</a>,
-                unde poate fi observata evolutia aplicatiei si contribuiile
-                fiecarui autor.
+                online.
             </p>
         </section>
         <section id="arhitectura">
-            <h2>5. Arhitectura software de ansamblu</h2>
+            <h2>4. Arhitectura software de ansamblu</h2>
             <h3>Single Page Application</h3>
             <p>
                 Site-ul este o aplicatie WEB de tipul <em>SPA - Single Page Application</em>. Beneficiul acestei
@@ -245,42 +229,31 @@
                 Avand posibilitatea de a-si face o captura de ecran cu accesoriul dorit, utilizatorul poate salva
                 aceste
                 imagini local, fiind accesibile pentru descarcare dupa capturare. Pentru a obtine aceasta
-                functionalitate,
-                folosim mecanismul de stocare locala a datelor oferit de <strong>Web Storage API</strong>: <code>localStorage</code>.
+                functionalitate folosim functia <code>HTMLCanvasElement.toDataURL()</code> care transforma <code>canvas</code>-ul
+                intr-un data URI care este salvat local,
+                folosind mecanismul de stocare locala a datelor oferit de <strong>Web Storage API</strong>: <code>localStorage</code>.
                 Acesta mentinand datele local chiar si cand utilizatorul inchide browserul.
                 La fel in local storage vor fi salvate accesoriile favorite
-                ale utilizatorului.
+                ale utilizatorului si preferinta culorii.
             </p>
             <h3>Session storage</h3>
             <p>
-                Un alt mecanism de stocare a datelor oferit de Web Storage API este <code>sessionStorage</code>. Ce il
+                Un alt mecanism de stocare a datelor oferit de <strong>Web Storage API</strong> este <code>sessionStorage</code>. Ce il
                 face diferit fata
                 de precedentul e faptul ca valabilitatea datelor dureaza exact cat sesiunea paginii, in alte cuvinte,
                 cat timp utilizatorul
-                tine fereastra pornita. Functionalitatea acestuia o folosim pentru a simula cosul de cumparaturi,
+                tine fereastra deschisa. Functionalitatea acestuia o folosim pentru a simula cosul de cumparaturi,
                 astfel simuland si magazinul
                 online. Utilizatorul isi poate verifica cosul dupa selectia accesoriilor dorite, si la urmatoarea
                 sesiune nu va avea in cos
                 accesoriile din sesiunea trecuta, imbunatatind experienta utilizatorului.
             </p>
-            <h3>JSON</h3>
-            <p>
-                Neavand partea de server simulam o baza de date printr-un fisier JSON. Fiecare accesoriu isi are calea
-                catre imagine folosita
-                pentru reprezentare, descrierea si categoriile ei. Pe baza categoriilor, accesoriile vor fi sortate in
-                pagina principala de
-                accesorii, de asemenea pe baza lor se vor face ulterioarele recomandari bazate pe preferintele
-                utilizatorului. Fiind o aplicaite
-                de tipul SPA, fisierul JSON vine odata cu requestul initial, astfel permitand accesarea accesoriilor fara
-                request-uri aditionale.
-            </p>
             <h3>Microdate</h3>
             <p>
-                Libraria pe care o vom folosi pentru a marca datele site-ului nostru este <a href="https://schema.org/">Schema.org</a>.
-                Aceasta ajuta la intelegerea mai bine a continutului site-ului de catre motoarele de cautare(SEO -
-                Search negine Optimization).
+                Pentru intelegerea mai buna a continutului site-ului de catre motoarele de cautare(<em>SEO -
+                Search negine Optimization</em>) folosim sistemul de marcare (markup) <a href="https://schema.org/">Schema.org</a>.
                 Marcatorul parinte pe care il folosim este schema <a href="https://schema.org/Store"><code>store</code></a>
-                reprezentand magazinul schema generala pentru magazine.
+                reprezentand schema generala pentru magazine.
                 De exemplu vom folosi prorietatea <a href="https://schema.org/Offer"><code>offer</code></a>
                 pentru fiecare produs pe care il ofera site-ul.
             </p>
@@ -290,6 +263,20 @@
                     Exemplu microdate
                 </figcaption>
             </figure>
+        </section>
+        <section id="testare">
+            <h2>5. Testare si chestii</h2>
+            <p>
+                Soon.
+            </p>
+        </section>
+        <section id="github">
+            <h2>6. Maniera de folosire a sistemului de management al codului-sursă ales</h2>
+            <p>
+                Toate fisierele sursa se afla la adresa <a href="https://github.com/MariusParasca/cliw">HEGE</a>,
+                unde poate fi observata evolutia aplicatiei si contribuiile
+                fiecarui autor.
+            </p>
         </section>
     </article>
 </body>

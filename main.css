@@ -20,7 +20,8 @@ body {
 }
 
 .webMarkup {
-    height: 350px;
+    /* height: 350px; */
+    width: 800px;
 }
 
 .diagram {
