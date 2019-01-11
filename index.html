@@ -2,7 +2,7 @@
 <html lang="ro">
 
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Documentatie Hege - headgear web assistant</title>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -18,8 +18,10 @@
             <div role="contentinfo" typeof="sa:AuthorsList">
                 <h2>Autorii:</h2>
                 <ul>
-                    <li typeof="schema:author"><a href="https://github.com/MariusParasca" typeof="schema:Person">Parasca Marius</a></li>
-                    <li typeof="schema:author"><a href="https://github.com/victorcotofana" typeof="schema:Person">Cotofana Victor</a></li>
+                    <li typeof="schema:author"><a href="https://github.com/MariusParasca" typeof="schema:Person">Parasca
+                            Marius</a></li>
+                    <li typeof="schema:author"><a href="https://github.com/victorcotofana" typeof="schema:Person">Cotofana
+                            Victor</a></li>
                 </ul>
             </div>
         </header>
@@ -277,9 +279,22 @@
             </figure>
         </section>
         <section id="testare">
-            <h2>5. Testare si Banchmarking</h2>
+            <h2>5. Testare si benchmarking</h2>
             <p>
-                <h3>Banchmarking</h3>
+                <h3>Testare</h3>
+                <p>
+                    Pentru a testa aplicatia, pe langa testele noastre manuale, am decurs si la solutii de testare
+                    automata.
+                    Am folosit framework-ul de testare automata <a href="https://www.seleniumhq.org/">Selenium</a> si
+                    extensia de browser
+                    <a href="https://chrome.google.com/webstore/detail/katalon-recorder/ljdobmomdgdljniojadhoplhkpialdid/related">
+                        Katalon Recorder</a>.
+                    Cu ajutorul extensiei am putut inregistra test case-urile direct din browser si apoi sa le exportam
+                    ca script-uri Python. Extensia permite rularea testelor si in browser, dar dorind mai mult control
+                    asupra testelor le-am rulat din Python.
+                </p>
+
+                <h3>Benchmarking</h3>
                 <p>
                     Pentru a imbunatatii calitatea aplicatiei noastre web am decurs la utilizarea unui tool automat
                     open-source
